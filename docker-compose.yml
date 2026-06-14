@@ -22,7 +22,7 @@ services:
     volumes:
       - ./front:/app
     environment:
-      - FASTAPI_HOST= 98.94.222.157
+      - FASTAPI_HOST=98.94.222.157
     depends_on:
       - backend
     restart: unless-stopped
