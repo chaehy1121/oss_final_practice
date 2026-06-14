@@ -128,12 +128,10 @@ st.markdown("""
 
 # ──────────────────────────────────────────────
 # FastAPI 엔드포인트
-# 로컬 실행: localhost:8000
-# Docker Compose: 환경변수 FASTAPI_HOST=backend (서비스명)
 # EC2 배포:  환경변수 FASTAPI_HOST=<EC2 퍼블릭 IP>
 # ──────────────────────────────────────────────
-_fastapi_host = os.environ.get("FASTAPI_HOST", "localhost")
-FASTAPI_URL = f"http://{_fastapi_host}:8000/recommend"
+_fastapi_host = os.environ.get("FASTAPI_HOST", "backend")
+FASTAPI_URL = f"http://{FASTAPI_HOST}:8000/recommend"
 
 # ──────────────────────────────────────────────
 # 헤더
