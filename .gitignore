@@ -1,0 +1,101 @@
+__pycache__/
+*.pyc
+.DS_Store
+venv/
+
+# ==========================
+# Python
+# ==========================
+# Byte-compiled / optimized / DLL files
+*.pyo
+*.pyd
+.Python
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ==========================
+# Streamlit
+# ==========================
+# Streamlit secrets and user-specific configurations (do not ignore if needed for deploy, but usually keep secrets local)
+.streamlit/secrets.toml
+
+# ==========================
+# Docker
+# ==========================
+# Ignore local docker volumes or overrides if they exist
+docker-compose.override.yml
+.docker/
+
+# ==========================
+# IDE / OS
+# ==========================
+# VS Code
+.vscode/
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+*.iws
+
+# MacOS
+._*
+.AppleDouble
+.LSOverride
+Icon
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/

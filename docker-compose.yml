@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  # ── FastAPI 백엔드 ──────────────────────────
+  backend:
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+    container_name: fragrance-backend
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  # ── Streamlit 프론트엔드 ───────────────────
+  frontend:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    container_name: fragrance-frontend
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./front:/app
+    environment:
+      # EC2에서는 아래 값을 실제 EC2 퍼블릭 IP로 변경하세요
+      # 예: FASTAPI_HOST=3.12.34.56
+      - FASTAPI_HOST=backend
+    depends_on:
+      - backend
+    restart: unless-stopped
