@@ -128,9 +128,8 @@ st.markdown("""
 
 # ──────────────────────────────────────────────
 # FastAPI 엔드포인트
-# EC2 배포:  환경변수 FASTAPI_HOST=<EC2 퍼블릭 IP>
 # ──────────────────────────────────────────────
-_fastapi_host = os.environ.get("FASTAPI_HOST", "backend")
+FASTAPI_HOST="98.94.222.157"
 FASTAPI_URL = f"http://{FASTAPI_HOST}:8000/recommend"
 
 # ──────────────────────────────────────────────
